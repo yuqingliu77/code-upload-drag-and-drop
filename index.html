@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitmap Font Generator</title>
+    <!-- Importing the styles -->
+    <link rel="stylesheet" href="styles.css"></link>
+    <script type="text/javascript" src="vendor/lodash.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- Your Contents -->
+        <main id="main">
+   
+            <!-- Preview glyph -->
+            <section id="typing" contenteditable="true">
+                <svg viewBox="0 0 1000 1000" id="svg-text" ><!-- <defs>
+
+                    </defs> -->
+
+                </svg>
+
+            </section>
+
+
+            <!--  -->
+            <footer id="footer">
+                <button id="btn-copy-text">Copy Text</button>
+                <input type="text" id="input-text" placeholder="Type…" aria-label="Type text"></input>
+            </footer>
+        </main>
+
+        <button id="show-controls-btn">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <g id="radial-lines"></g>
+                <circle cx="50" cy="50" r="15" fill="currentColor"/>
+            </svg>
+        </button>
+        <aside id="aside">
+            <button id="toggle-controls">◀ Hide</button>
+            <div id="controls-wrapper">
+                <div id="font-preview">
+                    <svg viewBox="0 0 1000 200" id="svg-preview">
+                    </svg>
+                </div>
+                <h2>Controls</h2>
+                <div id="controls">
+                    <!-- 在控制面板中添加布局选择器 -->
+                    <div class="control-group">
+                        <label for="layout-select">Layout:</label>
+                        <select id="layout-select">
+                            <option value="normal">Normal</option>
+                            <option value="rotation">Rotation</option>
+                            <option value="mirror">Mirror</option>
+                        </select>
+                    </div>
+
+                    <!-- 其他控制项 -->
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- Importing the script at the bottom! -->
+     <!-- This is our Font file -->
+    <script type="text/javascript" src="scripts/font.js"></script>
+    <!-- This is our pixel shape -->
+    <script type="text/javascript" src="scripts/renderPixel.js"></script>
+    <!-- This includes the main logic for rendering glyphs -->
+    <script type="text/javascript" src="scripts/script.js"></script>
+
+    <!-- Interactive Parts -->
+    
+    <!-- This is our controls file – it affects the rendering of our glyphs -->
+    <script type="text/javascript" src="scripts/controls.js"></script>
+    <!--  -->
+    <script type="text/javascript" src="scripts/download.js"></script>
+</body>
+</html>
